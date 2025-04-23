@@ -22,6 +22,9 @@ $env.config.buffer_editor = "nano"
 # disable welcome message
 $env.config.show_banner = false
 
+# filesystem
+def dirsize [] { ls -d | where type == dir | sort-by size | reverse }
+
 # cargo
 use std/util "path add"
 path add "~/.cargo/bin"
@@ -29,3 +32,6 @@ path add "~/.cargo/bin"
 # starship
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+
+# docker scripts
+source ~/git/nu_scripts/modules/docker/mod.nu
