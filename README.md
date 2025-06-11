@@ -1,4 +1,4 @@
-# Config
+# 🛠️ Config
 
 > Some of my Debian setup's config files
 
