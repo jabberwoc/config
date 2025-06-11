@@ -19,6 +19,12 @@
 
 $env.config.buffer_editor = "nano"
 
+# carapace
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
+mkdir ~/.cache/carapace
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+source ~/.cache/carapace/init.nu
+
 # disable welcome message
 $env.config.show_banner = false
 

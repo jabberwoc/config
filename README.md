@@ -19,6 +19,7 @@
 
 - nushell
 - starship
+- [carapace-bin](https://github.com/carapace-sh/carapace-bin/releases)
 
 ### Files
 
