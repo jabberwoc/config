@@ -39,9 +39,6 @@ path add "~/.cargo/bin"
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
-# docker scripts
-source ~/git/nu_scripts/modules/docker/mod.nu
-
 # Fast Node Manager (fnm)
 fnm env --json | from json | load-env
 $env.PATH = ($env.PATH | append $"($env.FNM_MULTISHELL_PATH)/bin")
